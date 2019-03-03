@@ -3,7 +3,7 @@ Worksheet for schematics workshop
 
 Worksheet instructions is in `book` directory. 
 
-Hosted as a Github page at [https://angularkc.github.io/schematics-workshop-worksheet]
+Hosted as a Github page at [https://angularkc.github.io/schematics-workshop-worksheet](https://angularkc.github.io/schematics-workshop-worksheet)
 
 ## Getting Going
 ```sh
