@@ -19,3 +19,7 @@ Run command prior to pushing to master.
 ```bash
 npm run book:deploy
 ```
+
+## Associated StackBlitz
+[Edit View](https://stackblitz.com/edit/schematics-worksheet?file=src%2Findex.html)
+[View Mode](https://schematics-worksheet.stackblitz.io/)

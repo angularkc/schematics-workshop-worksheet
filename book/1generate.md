@@ -5,7 +5,7 @@
    ```sh
 ng new <name of app>
    ```
-   Select options to include routing and use SCSS for styles.
+   Select options to include routing and use SCSS (or Sass) for styles.
    ![](assets/emojis/boom.png) You used your first schematic of the workshop.
 
 1. Open the new app in your IDE and serve the app using `ng serve --o` as a refresher of what you get out of the box.
