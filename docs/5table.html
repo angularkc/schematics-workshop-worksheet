@@ -1,0 +1,401 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Add A Table · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="4todo.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Worksheet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1generate.html">
+            
+                <a href="1generate.html">
+            
+                    
+                    Generate An App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2navigation.html">
+            
+                <a href="2navigation.html">
+            
+                    
+                    Add Nav View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="3dashboard.html">
+            
+                <a href="3dashboard.html">
+            
+                    
+                    Add Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="4todo.html">
+            
+                <a href="4todo.html">
+            
+                    
+                    Add To Do List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="5table.html">
+            
+                <a href="5table.html">
+            
+                    
+                    Add A Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://material.angular.io/guide/schematics">
+            
+                    
+                    Material Schematics Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://angular.io/cli">
+            
+                    
+                    CLI Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Add A Table</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="table"><a name="table" class="plugin-anchor" href="#table"><i class="fa fa-link" aria-hidden="true"></i></a>Table</h1>
+<p>For our last schematic, we&apos;ll add a table that has pagination and sorting built in.</p>
+<ol>
+<li><p>Generate the table by running the following command. You can pass in any name for the component. We&apos;ll use &apos;table&apos; for simplicity.</p>
+<pre class="language-"><code class="lang-sh">ng generate @angular/material:table <span class="token operator">&lt;</span>component-name<span class="token operator">&gt;</span>
+</code></pre>
+</li>
+<li><p>We&apos;ll add table as the 3rd item in our nav list. Make the following changes</p>
+<ul>
+<li>Add table route to the <em>app-routing.module.ts</em></li>
+<li>Update the router links and link name in <em>navigation.component.html</em> </li>
+</ul>
+</li>
+<li><p>The table view is full width and is a little hard to see what&apos;s going on so let&apos;s add a little space to the view. In <em>table.component.html</em> find the top level <code>div</code> and add a class named &apos;table-container&apos;. In <em>table.component.scss</em>, create a style for the class and set &apos;margin: 50px&apos;.</p>
+<p><div class="codetabs"><div class="codetabs-header"><div class="tab active" data-codetab="0">table.component.html</div><div class="tab" data-codetab="1">table.component.scss</div></div><div class="codetabs-body"><div class="tab active" data-codetab="0"><pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>mat-elevation-z8 table-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">mat-table</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>full-width-table<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[dataSource]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dataSource<span class="token punctuation">&quot;</span></span> <span class="token attr-name">matSort</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Elements<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    ...
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">mat-header-row</span> <span class="token attr-name">*matHeaderRowDef</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>displayedColumns<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">mat-row</span> <span class="token attr-name">*matRowDef</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>let row; columns: displayedColumns;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-paginator</span> <span class="token attr-name">#paginator</span>
+      <span class="token attr-name">[length]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dataSource.data.length<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">[pageIndex]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">[pageSize]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>50<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">[pageSizeOptions]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>[25, 50, 100, 250]<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-paginator</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre></div><div class="tab" data-codetab="1"><pre class="language-"><code class="lang-css"><span class="token selector">.table-container</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.full-width-table</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div></div></div></p>
+</li>
+</ol>
+<ol>
+<li><p>Your app is complete!</p>
+<p><img src="https://media.giphy.com/media/9Jcw5pUQlgQLe5NonJ/giphy.gif" alt=""></p>
+</li>
+</ol>
+<!-- Trick Markdown to give a little extra space -->
+<h2 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h2>
+<h4 id="stuck-check-out-a-stackblitz-with-completed-app"><a name="stuck-check-out-a-stackblitz-with-completed-app" class="plugin-anchor" href="#stuck-check-out-a-stackblitz-with-completed-app"><i class="fa fa-link" aria-hidden="true"></i></a>Stuck? Check out a StackBlitz with completed app</h4>
+<iframe src="https://stackblitz.com/edit/schematics-worksheet?ctl=1&amp;embed=1&amp;file=src/app/app.component.ts&amp;view=editor" width="100%" style="height: 30em; border-width:0px; border-style:none;">
+
+</iframe>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4todo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Add To Do List">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Add A Table","level":"2.5","depth":1,"next":{"title":"Material Schematics Guide","level":"3.1","depth":1,"url":"https://material.angular.io/guide/schematics","ref":"https://material.angular.io/guide/schematics","articles":[]},"previous":{"title":"Add To Do List","level":"2.4","depth":1,"path":"4todo.md","ref":"4todo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","copy-code-button","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"5table.md","mtime":"2019-03-03T17:11:06.113Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T17:16:54.256Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,41 @@
+{
+  "name": "schematics-workshop-worksheet",
+  "version": "0.0.0",
+  "description": "Instructions for creating an Angular Material app using schematics",
+  "main": "book/README.md",
+  "directories": {
+    "book": "book"
+  },
+  "dependencies": {
+    "gitbook-plugin-anchors": "^0.7.1",
+    "gitbook-plugin-codeblock-label": "^1.0.1",
+    "gitbook-plugin-codetabs": "^1.0.0",
+    "gitbook-plugin-copy-code-button": "0.0.2",
+    "gitbook-plugin-custom-favicon": "0.0.4",
+    "gitbook-plugin-hints": "^1.0.2",
+    "gitbook-plugin-prism": "^2.4.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "gitbook-cli": "^2.3.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "gitbook": "gitbook",
+    "book:install": "gitbook install",
+    "book:build": "gitbook build",
+    "start": "gitbook serve",
+    "book:deploy": "npm run book:build && rimraf docs && mkdirp docs && copyfiles -u 1 \"./_book/**/!(*.md)\" docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularkc/schematics-workshop-worksheet.git"
+  },
+  "author": "AngularKC",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/angularkc/schematics-workshop-worksheet/issues"
+  },
+  "homepage": "https://github.com/angularkc/schematics-workshop-worksheet#readme"
+}
