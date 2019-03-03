@@ -1,0 +1,31 @@
+{
+    "root": "./book",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+    "plugins": [
+        "custom-favicon",
+        "hints",
+        "codeblock-label",
+        "anchors",
+        "codetabs",
+        "copy-code-button",
+        "prism",
+        "-highlight"
+    ],
+    "pluginsConfig": {
+        "favicon": "book/assets/logos/angular.png",
+        "hints": {
+            "info": "fa fa-info-circle fa-lg",
+            "tip": "fa fa-lightbulb-o fa-lg",
+            "danger": "fa fa-exclamation-circle fa-lg",
+            "working": "fa fa-question-circle fa-lg"
+        },
+        "prism": {
+            "lang": {
+              "ts": "typescript"
+            }
+        }
+    }
+}

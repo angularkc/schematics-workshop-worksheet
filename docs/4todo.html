@@ -1,0 +1,445 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Add To Do List · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5table.html" />
+    
+    
+    <link rel="prev" href="3dashboard.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Worksheet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1generate.html">
+            
+                <a href="1generate.html">
+            
+                    
+                    Generate An App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2navigation.html">
+            
+                <a href="2navigation.html">
+            
+                    
+                    Add Nav View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="3dashboard.html">
+            
+                <a href="3dashboard.html">
+            
+                    
+                    Add Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="4todo.html">
+            
+                <a href="4todo.html">
+            
+                    
+                    Add To Do List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="5table.html">
+            
+                <a href="5table.html">
+            
+                    
+                    Add A Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://material.angular.io/guide/schematics">
+            
+                    
+                    Material Schematics Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://angular.io/cli">
+            
+                    
+                    CLI Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Add To Do List</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="to-do-list"><a name="to-do-list" class="plugin-anchor" href="#to-do-list"><i class="fa fa-link" aria-hidden="true"></i></a>To Do List</h1>
+<p>Now let&apos;s add a todo list and use one of the newest features from the Material team, drag and drop. This schematic resides in the CDK library.</p>
+<ol>
+<li><p>Generate the todo list by running the following command. You can pass in any name for the component. We&apos;ll use &apos;todo&apos; for simplicity.</p>
+<pre class="language-"><code class="lang-sh">ng generate @angular/cdk:drag-drop <span class="token operator">&lt;</span>component-name<span class="token operator">&gt;</span>
+</code></pre>
+</li>
+<li><p>Since we&apos;ll want to see both the dashboard and the todo via the nav list, we&apos;ll need to set up routing. Add routes for the dashboard and todo views in <em>app-routing.module.ts</em>. You&apos;ll have something similar to this depending on your component names.</p>
+<p></p><p class="code-label">app-routing.module.ts</p><p></p>
+<pre class="language-"><code class="lang-ts"><span class="token keyword">const</span> routes<span class="token punctuation">:</span> Routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+<span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">&apos;dashboard&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> DashboardComponent <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">&apos;todo&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> TodoComponent <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span> redirectTo<span class="token punctuation">:</span> <span class="token string">&apos;/dashboard&apos;</span><span class="token punctuation">,</span> pathMatch<span class="token punctuation">:</span> <span class="token string">&apos;full&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">&apos;**&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> DashboardComponent <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>In <em>navigation.component.html</em>, make the following changes</p>
+<ul>
+<li>replace the component selector for your dashboard to <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>update the anchor elements to use<code>routerLink</code> instead of <code>href</code></li>
+<li>add the <code>routerLinkActive</code> directive to each link and pass in &quot;active&quot; the input</li>
+<li>replace the link name with the name of the view (&quot;Link 1&quot; becomes &quot;Dashboard&quot; as an example)</li>
+</ul>
+</li>
+<li><p>In <em>navigation.component.scss</em>, add a class for <code>.mat-list-item.active</code> to set the background color. You can pick any color of your choosing or we can set it to the complementary (accent) color of your material theme by importing the theming file and using the complementary color (shown in example below).</p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o fa-lg"></i></div><div class="hints-container"><p>Please let us know if you&apos;re interested in hearing about theming Material, using Material components, or using the CDK in future AngularKC meetups. We&apos;re always looking for topic suggestions. We also want to hear about your projects and new-to-you technologies so feel free to let us know if you want to share/present something at a future meetup. </p>
+</div></div></p>
+<p>Your navigation component code will look like this
+ <div class="codetabs"><div class="codetabs-header"><div class="tab active" data-codetab="0">navigation.component.html</div><div class="tab" data-codetab="1">navigation.component.scss</div></div><div class="codetabs-body"><div class="tab active" data-codetab="0"><pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-sidenav-container</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>sidenav-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-sidenav</span> <span class="token attr-name">#drawer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>sidenav<span class="token punctuation">&quot;</span></span> <span class="token attr-name">fixedInViewport</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">[attr.role]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>(isHandset$ | async) ? <span class="token punctuation">&apos;</span>dialog<span class="token punctuation">&apos;</span> : <span class="token punctuation">&apos;</span>navigation<span class="token punctuation">&apos;</span><span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">[mode]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>(isHandset$ | async) ? <span class="token punctuation">&apos;</span>over<span class="token punctuation">&apos;</span> : <span class="token punctuation">&apos;</span>side<span class="token punctuation">&apos;</span><span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">[opened]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>!(isHandset$ | async)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-toolbar</span><span class="token punctuation">&gt;</span></span>Menu<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-toolbar</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-nav-list</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">mat-list-item</span> <span class="token attr-name">routerLink</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/dashboard<span class="token punctuation">&quot;</span></span> <span class="token attr-name">routerLinkActive</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>active<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Dashboard<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">mat-list-item</span> <span class="token attr-name">routerLink</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/todo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">routerLinkActive</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>active<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Todo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">mat-list-item</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Link 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-nav-list</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-sidenav</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-sidenav-content</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-toolbar</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Toggle sidenav<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">mat-icon-button</span>
+        <span class="token attr-name">(click)</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>drawer.toggle()<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">*ngIf</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>isHandset$ | async<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-icon</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Side nav toggle icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>menu<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-icon</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>schematics-workshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-toolbar</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-sidenav-content</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mat-sidenav-container</span><span class="token punctuation">&gt;</span></span></code></pre></div><div class="tab" data-codetab="1"><pre class="language-"><code class="lang-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">&apos;~@angular/material/theming&apos;</span><span class="token punctuation">;</span></span>
+
+<span class="token selector">.sidenav-container</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.sidenav</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.sidenav .mat-toolbar</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.mat-toolbar.mat-primary</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> sticky<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.mat-list-item.active</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">mat-color</span><span class="token punctuation">(</span>$mat-pink, 500<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">mat-contrast</span><span class="token punctuation">(</span>$mat-pink, 500<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div></div></div></p>
+</li>
+<li><p>View your reloaded app. <img src="assets/emojis/party-popper.png" alt=""></p>
+</li>
+<li><p>Resize your browser window or use your browser&apos;s device emulation mode to see how the todo list changes for smaller form factors.</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3dashboard.html" class="navigation navigation-prev " aria-label="Previous page: Add Dashboard">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5table.html" class="navigation navigation-next " aria-label="Next page: Add A Table">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Add To Do List","level":"2.4","depth":1,"next":{"title":"Add A Table","level":"2.5","depth":1,"path":"5table.md","ref":"5table.md","articles":[]},"previous":{"title":"Add Dashboard","level":"2.3","depth":1,"path":"3dashboard.md","ref":"3dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","copy-code-button","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"4todo.md","mtime":"2019-03-03T17:16:15.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T17:16:54.256Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
