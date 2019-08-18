@@ -271,25 +271,27 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="navigation-view"><a name="navigation-view" class="plugin-anchor" href="#navigation-view"><i class="fa fa-link" aria-hidden="true"></i></a>Navigation View</h1>
-<p>We&apos;ll create a navigation view for the app using Material&apos;s built in schematic to quickly scaffold out a responsive nav list. This schematic is different from the ones we used before-- we&apos;ll use CLI&apos;s <code>generate</code> command. In addition to generating components or services, the <code>generate</code> command takes a schematic as a param to generate code so that anyone can create and distribute their own schematic. </p>
+<p>We&apos;ll create a navigation view for the app using Material&apos;s built in schematic to quickly scaffold out a responsive nav list. This schematic is different from the ones we used before-- we&apos;ll use CLI&apos;s <code>generate</code> command. In addition to generating components or services, the <code>generate</code> command takes another named schematic as a parameter to generate code so that anyone can create and distribute their own schematic. </p>
 <ol>
-<li><p>Generate the nav view by running the following command. You can pass in any name for the component. We&apos;ll call it &apos;navigation&apos; for simplicity.</p>
-<pre class="language-"><code class="lang-sh">ng generate @angular/material:nav <span class="token operator">&lt;</span>component-name<span class="token operator">&gt;</span>
+<li><p>Generate the navigation view by running the following command. You can pass in any name for the component. We&apos;ll call it &apos;navigation&apos; for simplicity.</p>
+<pre class="language-"><code class="lang-sh">ng generate @angular/material:nav <span class="token operator">&lt;</span>your-component-name OR navigation<span class="token operator">&gt;</span>
 </code></pre>
-<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle fa-lg"></i></div><div class="hints-container"><p>The schematic creates a component and adds it to the <code>AppModule</code> like what you&apos;d expect if you created a component without using a schematic. It also imports Material control dependencies and adds a lot more code to the component than a basic component generation.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle fa-lg"></i></div><div class="hints-container"><p>The @angular/material:nav schematic creates a component and adds it to the <code>AppModule</code> like what you&apos;d expect if you created a component without using a schematic. It also imports Material ui control dependencies and adds code to the component to create a navigation menu.</p>
 </div></div></p>
-<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle fa-lg"></i></div><div class="hints-container"><p>If your component styles generated as CSS instead of SCSS, you&apos;ll need to rename the file to <em>*.scss</em> and update the link in the <em>*.component.ts</em>.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle fa-lg"></i></div><div class="hints-container"><p>If your component styles generated as CSS instead of SCSS, you&apos;ll need to rename the file to <em>*.scss</em> and update the <code>stylesUrl</code> link in the <em>*.component.ts</em>.</p>
 </div></div></p>
 </li>
 <li><p>To consume this new component, replace all the code in <em>app.component.html</em> with the selector for the nav component.</p>
-<p><div class="alert alert-warning hints-alert"><div class="hints-icon"><i class="fa fa-question-circle fa-lg"></i></div><div class="hints-container"><p>Delete the generated code in the <em>app.component.html</em> and add <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-navigation</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-navigation</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p><div class="alert alert-warning hints-alert"><div class="hints-icon"><i class="fa fa-question-circle fa-lg"></i></div><div class="hints-container"><p>Delete the generated code in the <em>app.component.html</em>. If you used the name <code>navigation</code> for the component name add <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-navigation</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-navigation</span><span class="token punctuation">&gt;</span></span></code>, otherwise use the name of your component.</p>
 </div></div></p>
 </li>
 <li><p>View your reloaded app. <img src="assets/emojis/party-popper.png" alt=""></p>
 </li>
-<li><p>Resize your browser window or use your browser&apos;s device emulation mode to see how the nav list changes for smaller form factors.</p>
+<li><p>Take a peek at the code for the navigation component. In particular, check out the <em>navigation.component.ts</em> and the <em>navigation.component.html</em>. Notice the template stubs in a menu list. We&apos;ll update that soon.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle fa-lg"></i></div><div class="hints-container"><p>The @angular/material:nav schematic contains a small bug in version 8.1.3. If all you see is a toolbar, then we need to make a small change in the template to display the side navigation menu. In <em>navigation.component.html</em> find the property binding for the <code>[opened]</code> attribute. We want the <code>mat-sidenav</code> element to open when the <code>isHandset$</code> property is false. Change the property binding to <code>[opened]=&quot;!(isHandset$ | async)&quot;</code>. </p>
+</div></div></p>
 </li>
-<li><p>Take a peek at the code for the navigation component. In particular, check out the <em>component.ts</em> and the <em>component.html</em>.</p>
+<li><p>Resize your browser window or use your browser&apos;s device emulation mode to see how the nav menu changes for smaller form factors.</p>
 </li>
 </ol>
 
@@ -335,7 +337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Add Nav View","level":"2.2","depth":1,"next":{"title":"Add Dashboard","level":"2.3","depth":1,"path":"3dashboard.md","ref":"3dashboard.md","articles":[]},"previous":{"title":"Generate An App","level":"2.1","depth":1,"path":"1generate.md","ref":"1generate.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","copy-code-button","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"2navigation.md","mtime":"2019-03-03T19:46:42.287Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T19:46:58.177Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Add Nav View","level":"2.2","depth":1,"next":{"title":"Add Dashboard","level":"2.3","depth":1,"path":"3dashboard.md","ref":"3dashboard.md","articles":[]},"previous":{"title":"Generate An App","level":"2.1","depth":1,"path":"1generate.md","ref":"1generate.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"2navigation.md","mtime":"2019-08-18T18:59:22.050Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-18T20:26:56.302Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -346,10 +348,6 @@
     
         
         <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         

@@ -274,7 +274,7 @@
 <p>Material has a few more schematics we can play with. Let&apos;s create a dashboard view as the main view for this app. This schematic uses cards arranged in a grid list.</p>
 <ol>
 <li><p>Generate the dashboard view by running the following command. You can pass in any name for the component. We&apos;ll use &apos;dashboard&apos; for simplicity.</p>
-<pre class="language-"><code class="lang-sh">ng generate @angular/material:dashboard <span class="token operator">&lt;</span>component-name<span class="token operator">&gt;</span>
+<pre class="language-"><code class="lang-sh">ng generate @angular/material:dashboard <span class="token operator">&lt;</span>your-component-name OR dashboard<span class="token operator">&gt;</span>
 </code></pre>
 </li>
 <li><p>To consume this new component, find the comment &quot;Add Content Here&quot; in <em>navigation.component.html</em>. Replace the comment with the dashboard component selector.</p>
@@ -329,7 +329,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Add Dashboard","level":"2.3","depth":1,"next":{"title":"Add To Do List","level":"2.4","depth":1,"path":"4todo.md","ref":"4todo.md","articles":[]},"previous":{"title":"Add Nav View","level":"2.2","depth":1,"path":"2navigation.md","ref":"2navigation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","copy-code-button","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"3dashboard.md","mtime":"2019-03-03T17:23:14.363Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T19:46:58.177Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Add Dashboard","level":"2.3","depth":1,"next":{"title":"Add To Do List","level":"2.4","depth":1,"path":"4todo.md","ref":"4todo.md","articles":[]},"previous":{"title":"Add Nav View","level":"2.2","depth":1,"path":"2navigation.md","ref":"2navigation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"3dashboard.md","mtime":"2019-08-17T22:14:06.960Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-18T20:26:56.302Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -340,10 +340,6 @@
     
         
         <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         

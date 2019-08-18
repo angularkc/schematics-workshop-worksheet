@@ -274,7 +274,7 @@
 <p>Now let&apos;s add a todo list and use one of the newest features from the Material team, drag and drop. This schematic resides in the CDK library.</p>
 <ol>
 <li><p>Generate the todo list by running the following command. You can pass in any name for the component. We&apos;ll use &apos;todo&apos; for simplicity.</p>
-<pre class="language-"><code class="lang-sh">ng generate @angular/cdk:drag-drop <span class="token operator">&lt;</span>component-name<span class="token operator">&gt;</span>
+<pre class="language-"><code class="lang-sh">ng generate @angular/cdk:drag-drop <span class="token operator">&lt;</span>your-component-name OR todo<span class="token operator">&gt;</span>
 </code></pre>
 </li>
 <li><p>Since we&apos;ll want to see both the dashboard and the todo via the nav list, we&apos;ll need to set up routing. Add routes for the dashboard and todo views in <em>app-routing.module.ts</em>. You&apos;ll have something similar to this depending on your component names.</p>
@@ -287,17 +287,20 @@
 <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
-<li><p>In <em>navigation.component.html</em>, make the following changes</p>
-<ul>
-<li>replace the component selector for your dashboard to <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></li>
-<li>update the anchor elements to use<code>routerLink</code> instead of <code>href</code></li>
-<li>add the <code>routerLinkActive</code> directive to each link and pass in &quot;active&quot; the input</li>
-<li>replace the link name with the name of the view (&quot;Link 1&quot; becomes &quot;Dashboard&quot; as an example)</li>
-</ul>
+<li><p>In <em>navigation.component.html</em>, make the following changes we now want to consume the router outlet. Replace the component selector for your dashboard component (if you used the same names we did, that&apos;s <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-dashboard</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-dashboard</span><span class="token punctuation">&gt;</span></span></code>) with <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code>.</p>
 </li>
-<li><p>In <em>navigation.component.scss</em>, add a class for <code>.mat-list-item.active</code> to set the background color. You can pick any color of your choosing or we can set it to the complementary (accent) color of your material theme by importing the theming file and using the complementary color (shown in example below).</p>
-<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o fa-lg"></i></div><div class="hints-container"><p>Please let us know if you&apos;re interested in hearing about theming Material, using Material components, or using the CDK in future AngularKC meetups. We&apos;re always looking for topic suggestions. We also want to hear about your projects and new-to-you technologies so feel free to let us know if you want to share/present something at a future meetup. </p>
-</div></div></p>
+<li><p>We want to build a nav menu, so first let&apos;s update the text for each anchor element in the order we want to see the menu items. First we want dashboard as the main initial view, followed by the todo list. Update the text in the first two anchor elements to &quot;Dashboard&quot; and &quot;Todo&quot;.</p>
+</li>
+<li><p>The @angular/material:nav schematic automatically adds <code>href</code> attributes to the anchor tags. Since we want to use the router, replace the <code>href</code> with <code>routerLink</code> for both &quot;Dashboard&quot; and &quot;Todo&quot;.</p>
+</li>
+<li><p>We need to set the <code>routerLink</code> value. The value should match the route you defined in <em>app-routing.module.ts</em> (plus a slash in front) for the component. For dashboard, use the value <code>/dashboard</code>. Repeat for &quot;Todo&quot; anchor element. Your &quot;Dashboard&quot; anchor element will look like this:</p>
+<p></p><p class="code-label">navigation.component.html</p><p></p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">mat-list-item</span> <span class="token attr-name">routerLink</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/dashboard<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Dashboard<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+</li>
+<li><p>Now when you click on a link the view changes between the dashboard and your todo list! But we want to make it easy to see which link we&apos;re on by changing the color of the link when it&apos;s in view. Add the <code>routerLinkActive=&quot;active&quot;</code> directive and value to the dashboard and todo anchor tags. This will use a class we&apos;ll create named <code>.active</code> whenenver the router link associated to that view is active.</p>
+</li>
+<li><p>In <em>navigation.component.scss</em>, add a class for <code>.mat-list-item.active</code> to set the background color. You can pick any color of your choosing or we can set it to the complementary (accent) color of your material theme by importing the theming file and using the complementary color (shown in the code snippet below).</p>
 <p>Your navigation component code will look like this
  <div class="codetabs"><div class="codetabs-header"><div class="tab active" data-codetab="0">navigation.component.html</div><div class="tab" data-codetab="1">navigation.component.scss</div></div><div class="codetabs-body"><div class="tab active" data-codetab="0"><pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-sidenav-container</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>sidenav-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mat-sidenav</span> <span class="token attr-name">#drawer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>sidenav<span class="token punctuation">&quot;</span></span> <span class="token attr-name">fixedInViewport</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
@@ -349,6 +352,8 @@
   <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">mat-color</span><span class="token punctuation">(</span>$mat-pink, 500<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">mat-contrast</span><span class="token punctuation">(</span>$mat-pink, 500<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div></div></div></p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-lightbulb-o fa-lg"></i></div><div class="hints-container"><p>Please let us know if you&apos;re interested in hearing about theming Material, using Material components, or using the CDK in future AngularKC meetups. We&apos;re always looking for topic suggestions. We also want to hear about your projects and new-to-you technologies so feel free to let us know if you want to share/present something at a future meetup. </p>
+</div></div></p>
 </li>
 <li><p>View your reloaded app. <img src="assets/emojis/party-popper.png" alt=""></p>
 </li>
@@ -398,7 +403,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Add To Do List","level":"2.4","depth":1,"next":{"title":"Add A Table","level":"2.5","depth":1,"path":"5table.md","ref":"5table.md","articles":[]},"previous":{"title":"Add Dashboard","level":"2.3","depth":1,"path":"3dashboard.md","ref":"3dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","copy-code-button","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"4todo.md","mtime":"2019-03-03T17:23:14.364Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T19:46:58.177Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Add To Do List","level":"2.4","depth":1,"next":{"title":"Add A Table","level":"2.5","depth":1,"path":"5table.md","ref":"5table.md","articles":[]},"previous":{"title":"Add Dashboard","level":"2.3","depth":1,"path":"3dashboard.md","ref":"3dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"4todo.md","mtime":"2019-08-18T19:57:31.602Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-18T20:26:56.302Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -409,10 +414,6 @@
     
         
         <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
