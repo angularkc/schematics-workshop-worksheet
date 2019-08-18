@@ -45,8 +45,7 @@ ng generate @angular/material:table <your-component-name OR table>
 
    ![](https://media.giphy.com/media/9Jcw5pUQlgQLe5NonJ/giphy.gif)
 
-<!-- Trick Markdown to give a little extra space -->
-## 
-#### Stuck? Check out a StackBlitz with completed app
-<iframe src="https://stackblitz.com/edit/schematics-worksheet?ctl=1&embed=1&file=src/app/app.component.ts&view=editor" width="100%" style="height: 30em; border-width:0px; border-style:none;">
 
+{% hint style="tip" %}
+[See the results on StackBlitz](https://stackblitz.com/github/angularkc/schematics-workshop-worksheet/tree/master/examples/5table)
+{% endhint %}
