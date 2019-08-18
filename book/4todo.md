@@ -100,3 +100,7 @@ Please let us know if you're interested in hearing about theming Material, using
 1. View your reloaded app. ![](assets/emojis/party-popper.png)
 
 1. Resize your browser window or use your browser's device emulation mode to see how the todo list changes for smaller form factors.
+
+{% hint style="tip" %}
+[See the results on StackBlitz](https://stackblitz.com/github/angularkc/schematics-workshop-worksheet/tree/master/examples/4todo)
+{% endhint %}

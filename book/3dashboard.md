@@ -15,3 +15,7 @@ ng generate @angular/material:dashboard <your-component-name OR dashboard>
 1. Resize your browser window or use your browser's device emulation mode to see how the cards in nav list changes for smaller form factors.
 
 1. Take a peek at the dashboard component code. Feel free to change card titles or sizes.
+
+{% hint style="tip" %}
+[See the results on StackBlitz](https://stackblitz.com/github/angularkc/schematics-workshop-worksheet/tree/master/examples/3dashboard)
+{% endhint %}

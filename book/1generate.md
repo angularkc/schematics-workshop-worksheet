@@ -41,3 +41,8 @@ Material is an opinionated library. If you don't want all the opinions, you can 
    {% endhint %}
 
 1. Start your app again for the remainder of the workshop.
+
+
+{% hint style="tip" %}
+[See the results on StackBlitz](https://stackblitz.com/github/angularkc/schematics-workshop-worksheet/tree/master/examples/1generate)
+{% endhint %}

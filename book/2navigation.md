@@ -32,3 +32,6 @@ The @angular/material:nav schematic contains a small bug in version 8.1.3. If al
 
 1. Resize your browser window or use your browser's device emulation mode to see how the nav menu changes for smaller form factors.
 
+{% hint style="tip" %}
+[See the results on StackBlitz](https://stackblitz.com/github/angularkc/schematics-workshop-worksheet/tree/master/examples/2navigation)
+{% endhint %}
