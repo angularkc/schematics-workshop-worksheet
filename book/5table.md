@@ -5,10 +5,10 @@ For our last schematic, we'll add a table that has pagination and sorting built 
 1. Generate the table by running the following command. You can pass in any name for the component. We'll use 'table' for simplicity.
 
    ```sh
-ng generate @angular/material:table <component-name>
+ng generate @angular/material:table <your-component-name OR table>
    ```
 
-1. We'll add table as the 3rd item in our nav list. Make the following changes
+1. We'll add table as the 3rd item in our nav list. Make the following changes like we did for dashboard and todo components on the previous page
    - Add table route to the _app-routing.module.ts_
    - Update the router links and link name in _navigation.component.html_ 
 

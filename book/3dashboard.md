@@ -5,7 +5,7 @@ Material has a few more schematics we can play with. Let's create a dashboard vi
 1. Generate the dashboard view by running the following command. You can pass in any name for the component. We'll use 'dashboard' for simplicity.
 
    ```sh
-ng generate @angular/material:dashboard <component-name>
+ng generate @angular/material:dashboard <your-component-name OR dashboard>
    ```
 
 1. To consume this new component, find the comment "Add Content Here" in _navigation.component.html_. Replace the comment with the dashboard component selector.

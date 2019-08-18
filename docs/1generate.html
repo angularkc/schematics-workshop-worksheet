@@ -275,21 +275,31 @@
 <li><p>Generate the app using Angular CLI by running</p>
 <pre class="language-"><code class="lang-sh">ng new <span class="token operator">&lt;</span>name of app<span class="token operator">&gt;</span>
 </code></pre>
-<p>Select options to include routing and use SCSS (or Sass) for styles.
-<img src="assets/emojis/boom.png" alt=""> You used your first schematic of the workshop.</p>
+<p>When prompted, select the following options:</p>
+<ul>
+<li>Select <strong>YES</strong> to include routing</li>
+<li>Select SCSS (or Sass) for styles</li>
+</ul>
+<p><img src="assets/emojis/boom.png" alt=""> You used your first schematic of the workshop.</p>
 </li>
 <li><p>Open the new app in your IDE and serve the app using <code>ng serve --o</code> as a refresher of what you get out of the box.</p>
 </li>
 <li><p>Stop serving the app. The next step changes <em>angular.json</em> and the watcher won&apos;t catch changes made in that file.</p>
 </li>
-<li><p>Let&apos;s get Material library in here. Use Angular CLI&apos;s <code>add</code> command to run the schematic created by the Material team.</p>
+<li><p>Let&apos;s get Angular Material library in here. The Material library houses a collection of UI components that use Material design specifications. Use Angular CLI&apos;s <code>add</code> command to run the schematic created by the Material team.</p>
 <pre class="language-"><code class="lang-sh">ng add @angular/material
 </code></pre>
-<p>Select options to set your theme color (pick anything except <strong>Custom</strong>), include <code>hammerjs</code>, and include browser animations.</p>
+<p>When prompted, select the following options:</p>
+<ul>
+<li>Select your theme color (pick anything except <strong>Custom</strong>)</li>
+<li>Include <code>hammerjs</code> </li>
+<li>Include browser animations</li>
+</ul>
 </li>
 <li><p>A lot happened in this schematic. Here&apos;s some of the changes made to your app </p>
 <ul>
 <li>added npm packages</li>
+<li>added Angular&apos;s <strong>CDK</strong> <strong>C</strong>omponent <strong>D</strong>evelopment <strong>K</strong>it library, a dependency for Angular Material</li>
 <li>updated the <em>angular.json</em> file to include your theme </li>
 <li>imported <code>hammerjs</code> to your main entry files for both the app and for testing </li>
 <li>added browser animations</li>
@@ -297,14 +307,10 @@
 <li>added some default styles </li>
 </ul>
 <p>You can read up more about what all happened in <a href="https://material.angular.io/guide/schematics" target="_blank">Material&apos;s Schematic Guide</a>.</p>
-<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle fa-lg"></i></div><div class="hints-container"><p>Material is an opinionated library. If you don&apos;t want all the opinions, you can use the CDK instead (which we will use next, but doesn&apos;t have as many control options) or back out some of the changes.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle fa-lg"></i></div><div class="hints-container"><p>Material is an opinionated library. If you don&apos;t want all the opinions, you can use the CDK instead (but doesn&apos;t have as many control options) or back out some of the style changes.</p>
 </div></div></p>
 </li>
-<li><p>Now let&apos;s bring in CDK using the <code>add</code> command again.</p>
-<pre class="language-"><code class="lang-sh">ng add @angular/cdk
-</code></pre>
-</li>
-<li><p>Running these schematic didn&apos;t make any code changes though. You can serve the app again for the remainder of the workshop.</p>
+<li><p>Start your app again for the remainder of the workshop.</p>
 </li>
 </ol>
 
@@ -350,7 +356,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Generate An App","level":"2.1","depth":1,"next":{"title":"Add Nav View","level":"2.2","depth":1,"path":"2navigation.md","ref":"2navigation.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","copy-code-button","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"1generate.md","mtime":"2019-03-03T19:46:42.287Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T19:46:58.177Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Generate An App","level":"2.1","depth":1,"next":{"title":"Add Nav View","level":"2.2","depth":1,"path":"2navigation.md","ref":"2navigation.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["custom-favicon","hints","codeblock-label","anchors","codetabs","prism","-highlight"],"root":"./book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"ts":"typescript"}},"codeblock-label":{},"search":{},"codetabs":{},"hints":{"info":"fa fa-info-circle fa-lg","tip":"fa fa-lightbulb-o fa-lg","danger":"fa fa-exclamation-circle fa-lg","working":"fa fa-question-circle fa-lg"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"book/assets/logos/angular.png","custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"1generate.md","mtime":"2019-08-18T17:28:46.446Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-18T20:26:56.302Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -361,10 +367,6 @@
     
         
         <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
