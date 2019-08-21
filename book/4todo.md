@@ -8,7 +8,7 @@ Now let's add a todo list and use one of the newest features from the Material t
 ng generate @angular/cdk:drag-drop <your-component-name OR todo>
    ```
 
-1. Since we'll want to see both the dashboard and the todo via the nav list, we'll need to set up routing. Add routes for the dashboard and todo views in _app-routing.module.ts_. You'll have something similar to this depending on your component names.
+1. Since we'll want to see both the dashboard and the todo via the nav list, we'll need to set up routing. Add routes for the dashboard and todo views in _app-routing.module.ts_. You'll have something similar to this depending on your component names. You may need to manually import the component files if your IDE setup doesn't automatically import files for you.
 
    {% filename %}app-routing.module.ts{% endfilename %}
    ```ts

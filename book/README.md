@@ -2,7 +2,7 @@
 
 # Overview
 
-Tonight we are using schematics from Angular Material and CDK (Component Development Kit) libraries to create an application. We'll show how easy schematics are to use and how to quickly scaffold a basic website. This is a self-directed workshop. We may interrupt work to check progress, if we find any mistakes or encounter new problems, special hints, etc. Please feel free to ask us or your neighbors for assistance.
+Tonight we are using [schematics](https://angular.io/guide/schematics) from Angular Material and **CDK** (**C**omponent **D**evelopment **K**it) libraries to create an application. Schematics are templates to quickly scaffold code using the Angular CLI. Angular has some schematics built in. We'll show how easy schematics are to use and how to quickly scaffold a basic website. This is a self-directed workshop. We may interrupt work to check progress, if we find any mistakes or encounter new problems, special hints, etc. Please feel free to ask us or your neighbors for assistance.
 
 At the end of this mini-workshop we'll have an application that looks like this. You can check it out for yourself [on StackBlitz](https://schematics-worksheet.stackblitz.io).
 
